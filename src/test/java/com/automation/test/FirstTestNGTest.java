@@ -1,10 +1,13 @@
 package com.automation.test;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class FirstTestNGTest {
+
+    @BeforeClass // pre-requisite for the entire Class, runs once
+    public void outerSetUp(){
+        System.out.println("Before the test Class");
+    }
 
     @BeforeMethod
     public void setUp(){
@@ -16,9 +19,24 @@ public class FirstTestNGTest {
         System.out.println("First Test");
     }
 
+    @Test
+    public void secondTest (){
+        System.out.println("Second Test");
+    }
+
+    @Test
+    public void thirdTest (){
+        System.out.println("Third Test");
+    }
+
     @AfterMethod
     public void cleanUp(){
         System.out.println("After every test");
+    }
+
+    @AfterClass
+    public void outerCleanUp (){
+        System.out.println("After the test Class");
     }
 
 }
