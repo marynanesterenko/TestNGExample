@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<!-- here we need to specify meaningful information, as far as the names of the tests, ets.-->
+<suite name="Smoke Automation Test" verbose="1">
+    <test name="Login Test">
+        <classes>
+            <class name="com.automation.test.LoginTest">
+                <methods>
+                    <exclude name="thirdTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!--    -->
+    <test name="Product Listing Page Test">
+        <classes>
+            <class name="com.automation.test.ProductListingPageTest"/>
+        </classes>
+    </test>
+</suite>
