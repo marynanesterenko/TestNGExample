@@ -2,20 +2,17 @@
 
 <!-- here we need to specify meaningful information, as far as the names of the tests, ets.-->
 <suite name="Smoke Automation Test" verbose="1">
-    <test name="Login Test">
-        <classes>
-            <class name="com.automation.test.LoginTest">
-                <methods>
-                    <exclude name="thirdTest"/>
-                </methods>
-            </class>
-        </classes>
+
+    <groups>
+        <run>
+            <include name="Chirag"></include>
+        </run>
+    </groups>
+
+    <test name="This is my Test">
+        <packages>
+            <package name="com.automation.test"/>
+        </packages>
     </test>
 
-    <!--    -->
-    <test name="Product Listing Page Test">
-        <classes>
-            <class name="com.automation.test.ProductListingPageTest"/>
-        </classes>
-    </test>
 </suite>

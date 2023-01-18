@@ -4,18 +4,13 @@ import org.testng.annotations.Test;
 
 public class OrderCancellationTest extends BaseTest{
 
-    @Test
-    public void veryUserCanCancelOrder(){
+    @Test(groups = "Smoke")
+    public void verifyUserCanCancelOrder() {
         System.out.println("Test - Verify User Can Cancel the Order");
     }
 
-    @Test
-    public void veryUserCannotCancelOrderOnceOrderStateIsShipped(){
-        System.out.println("Test - Verify User Cannot Cancel the Order Once State Is Shipped");
+    @Test(groups = "Chirag")
+    public void verifyUserCannotCancelOrderOnceOrderStateIsShipped() {
+        System.out.println("Test - Verify User Cannot Cancel Order Once Order State Is Shipped");
     }
-
-
-
-
-
 }
